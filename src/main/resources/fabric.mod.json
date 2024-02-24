@@ -1,31 +1,32 @@
 {
 	"schemaVersion": 1,
-	"id": "modid",
+	"id": "elytra_overhaul",
 	"version": "${version}",
-	"name": "Example mod",
+	"name": "Yando's Elytra Overhaul Mod",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
-		"Me!"
+		"OverlordsIII",
+		"Yumatan"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/modid/icon.png",
+	"icon": "assets/elytra_overhaul/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.example.ExampleMod"
+			"io.github.overlordsiii.ElytraOverhaul"
 		],
 		"client": [
-			"com.example.ExampleModClient"
+			"io.github.overlordsiii.ElytraOverhaulClient"
 		]
 	},
 	"mixins": [
-		"modid.mixins.json",
+		"elytra_overhaul.mixins.json",
 		{
-			"config": "modid.client.mixins.json",
+			"config": "elytra_overhaul.client.mixins.json",
 			"environment": "client"
 		}
 	],
@@ -34,8 +35,5 @@
 		"minecraft": "~1.20.4",
 		"java": ">=17",
 		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
 	}
 }
