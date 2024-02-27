@@ -3,7 +3,7 @@
 	"id": "elytra_overhaul",
 	"version": "${version}",
 	"name": "Yando's Elytra Overhaul Mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "A small utility mod that intends to overhaul the usage of the elytra, including adding several restrictions",
 	"authors": [
 		"OverlordsIII",
 		"Yumatan"
