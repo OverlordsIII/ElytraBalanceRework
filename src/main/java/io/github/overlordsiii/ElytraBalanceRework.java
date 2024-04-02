@@ -2,7 +2,7 @@ package io.github.overlordsiii;
 
 import net.fabricmc.api.ModInitializer;
 
-public class ElytraOverhaul implements ModInitializer {
+public class ElytraBalanceRework implements ModInitializer {
 	/**
 	 * Runs the mod initializer.
 	 */

@@ -4,12 +4,14 @@
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "AnvilScreenHandlerMixin",
+    "EndCityGeneratorMixin",
     "FireworkRocketItemMixin",
     "ItemsMixin",
     "LivingEntityMixin",
     "MendingEnchantmentMixin",
     "UnbreakingEnchantmentMixin"
   ],
+  "client": [],
   "injectors": {
     "defaultRequire": 1
 	}

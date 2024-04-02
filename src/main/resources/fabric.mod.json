@@ -1,9 +1,9 @@
 {
 	"schemaVersion": 1,
-	"id": "elytra_overhaul",
+	"id": "elytra_balance_rework",
 	"version": "${version}",
-	"name": "Yando's Elytra Overhaul Mod",
-	"description": "A small utility mod that intends to overhaul the usage of the elytra, including adding several restrictions",
+	"name": "Yando's Elytra Balance Rework",
+	"description": "A small utility mod that intends to rework the balance of the elytra, including adding several restrictions",
 	"authors": [
 		"OverlordsIII",
 		"Yumatan"
@@ -13,22 +13,18 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/elytra_overhaul/icon.png",
+	"icon": "assets/elytra_balance_rework/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"io.github.overlordsiii.ElytraOverhaul"
+			"io.github.overlordsiii.ElytraBalanceRework"
 		],
 		"client": [
-			"io.github.overlordsiii.ElytraOverhaulClient"
+			"io.github.overlordsiii.client.ElytraBalanceRework"
 		]
 	},
 	"mixins": [
-		"elytra_overhaul.mixins.json",
-		{
-			"config": "elytra_overhaul.client.mixins.json",
-			"environment": "client"
-		}
+		"elytra_balance_rework.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.15.0",

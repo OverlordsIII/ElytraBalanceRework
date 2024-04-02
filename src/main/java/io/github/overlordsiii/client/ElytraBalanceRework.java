@@ -1,8 +1,8 @@
-package io.github.overlordsiii;
+package io.github.overlordsiii.client;
 
 import net.fabricmc.api.ClientModInitializer;
 
-public class ElytraOverhaulClient implements ClientModInitializer {
+public class ElytraBalanceRework implements ClientModInitializer {
 	/**
 	 * Runs the mod initializer on the client environment.
 	 */
