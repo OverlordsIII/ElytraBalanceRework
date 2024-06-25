@@ -1,5 +1,6 @@
 package io.github.overlordsiii.mixin;
 
+import io.github.overlordsiii.ElytraBalanceRework;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Constant;
@@ -22,6 +23,6 @@ public class ItemsMixin {
 	)
 	private static int replaceElytraMaxDamage(int maxDamage)
 	{
-		return 800;
+		return ElytraBalanceRework.CONFIG.elytraDurability;
 	}
 }

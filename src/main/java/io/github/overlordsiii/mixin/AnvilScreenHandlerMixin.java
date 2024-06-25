@@ -1,5 +1,7 @@
 package io.github.overlordsiii.mixin;
 
+import io.github.overlordsiii.ElytraBalanceRework;
+import io.github.overlordsiii.config.ElytraBalanceReworkConfig;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -21,8 +23,9 @@ public abstract class AnvilScreenHandlerMixin extends ForgingScreenHandler {
 
 	@ModifyArg(method = "updateResult", at = @At(value = "INVOKE", target = "Lnet/minecraft/item/ItemStack;setDamage(I)V", ordinal = 0))
 	private int modifyElytraDamage(int damage) {
-		if (this.input.getStack(0).getItem().equals(Items.PHANTOM_MEMBRANE)) {
-			return damage - 400;
+		if (this.input.getStack(1).getItem().equals(Items.PHANTOM_MEMBRANE)) {
+			damage += 200; // cancel out default phantom membrane fix
+			return damage - ElytraBalanceRework.CONFIG.phantomMembraneRepair;
 		}
 
 		return damage;

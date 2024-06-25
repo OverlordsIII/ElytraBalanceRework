@@ -1,15 +1,15 @@
 {
   "required": true,
   "package": "io.github.overlordsiii.mixin",
-  "compatibilityLevel": "JAVA_17",
+  "compatibilityLevel": "JAVA_21",
   "mixins": [
     "AnvilScreenHandlerMixin",
+    "EnchantmentMixin",
     "EndCityGeneratorMixin",
     "FireworkRocketItemMixin",
     "ItemsMixin",
-    "LivingEntityMixin",
-    "MendingEnchantmentMixin",
-    "UnbreakingEnchantmentMixin"
+    "EnchantmentsMixin",
+    "LivingEntityMixin"
   ],
   "client": [],
   "injectors": {

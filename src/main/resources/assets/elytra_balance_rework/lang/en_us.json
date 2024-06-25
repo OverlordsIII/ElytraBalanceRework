@@ -1,0 +1,14 @@
+{
+  "text.autoconfig.elytra_balance_rework.title": "Yando's Elytra Balance Rework",
+  "text.autoconfig.elytra_balance_rework.option.phantomMembraneRepair": "Phantom Membrane Repair Points",
+  "text.autoconfig.elytra_balance_rework.option.rebalanceElytraSpawns": "Rebalance Elytra Spawns",
+  "text.autoconfig.elytra_balance_rework.option.noElytraSpawnPercentage": "No Elytra Spawns Percentage",
+  "text.autoconfig.elytra_balance_rework.option.brokenElytraSpawnPercentage": "Broken Elytra Spawn Percentage",
+  "text.autoconfig.elytra_balance_rework.option.partiallyDamagedElytraSpawnPercentage": "Partially Damaged Elytra Spawn Percentage",
+  "text.autoconfig.elytra_balance_rework.option.initialRocketUseDamage": "Rocket Use Damage",
+  "text.autoconfig.elytra_balance_rework.option.elytraDurability": "Elytra Durability",
+  "text.autoconfig.elytra_balance_rework.option.elytraDamagePercentageAbsorbed": "Elytra Damage Absorbed Percentage",
+  "text.autoconfig.elytra_balance_rework.option.mendingCompatibleWithElytras": "Mending Compatible With Elytras",
+  "text.autoconfig.elytra_balance_rework.option.unbreakingCompatibleWithElytras": "Unbreaking Compatible With Elytras",
+  "text.autoconfig.elytra_balance_rework.option.stopElytraFlyDamage": "Stop Elytra Fly Damage"
+}

@@ -19,8 +19,8 @@
 		"main": [
 			"io.github.overlordsiii.ElytraBalanceRework"
 		],
-		"client": [
-			"io.github.overlordsiii.client.ElytraBalanceRework"
+		"modmenu": [
+			"io.github.overlordsiii.integration.ModMenuIntegration"
 		]
 	},
 	"mixins": [
@@ -28,7 +28,7 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.15.0",
-		"minecraft": "~1.20.4",
+		"minecraft": "1.21.x",
 		"java": ">=17",
 		"fabric-api": "*"
 	}
