@@ -1,7 +1,6 @@
 package io.github.overlordsiii.mixin;
 
 import io.github.overlordsiii.ElytraBalanceRework;
-import io.github.overlordsiii.config.ElytraBalanceReworkConfig;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -14,11 +13,9 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.entity.damage.DamageSources;
 import net.minecraft.entity.damage.DamageTypes;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.world.World;
 
 @Mixin(LivingEntity.class)
@@ -40,7 +37,7 @@ public abstract class LivingEntityMixin extends Entity {
 				if (source.isOf(DamageTypes.ON_FIRE) || source.isOf(DamageTypes.IN_FIRE)) {
 					itemStackDamage = Math.round(amount);
 				} else {
-					float tenPercent = (ElytraBalanceRework.CONFIG.elytraDamagePercentageAbsorbed / 100) * amount;
+					float tenPercent = (float) (((ElytraBalanceRework.CONFIG.elytraDamageAbsorbedPercentage) / 100) * amount);
 					itemStackDamage = Math.max(1, Math.round(tenPercent));
 				}
 				itemStack.damage(itemStackDamage, ((LivingEntity) (Object) this), this.getPreferredEquipmentSlot(itemStack));

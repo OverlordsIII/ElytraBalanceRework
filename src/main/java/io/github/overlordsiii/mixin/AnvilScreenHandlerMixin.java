@@ -25,7 +25,7 @@ public abstract class AnvilScreenHandlerMixin extends ForgingScreenHandler {
 	private int modifyElytraDamage(int damage) {
 		if (this.input.getStack(1).getItem().equals(Items.PHANTOM_MEMBRANE)) {
 			damage += 200; // cancel out default phantom membrane fix
-			return damage - ElytraBalanceRework.CONFIG.phantomMembraneRepair;
+			return damage - (int) ElytraBalanceRework.CONFIG.phantomMembraneRepair;
 		}
 
 		return damage;

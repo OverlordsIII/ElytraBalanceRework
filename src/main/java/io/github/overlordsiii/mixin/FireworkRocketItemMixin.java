@@ -27,7 +27,7 @@ public class FireworkRocketItemMixin {
 		}
 		user.getArmorItems().forEach(itemStack -> {
 			if (itemStack.getItem().equals(Items.ELYTRA)) {
-				itemStack.damage(ElytraBalanceRework.CONFIG.initialRocketUseDamage, user, user.getPreferredEquipmentSlot(itemStack));
+				itemStack.damage((int) ElytraBalanceRework.CONFIG.initialRocketUseDamage, user, user.getPreferredEquipmentSlot(itemStack));
 			}
 		});
 	}

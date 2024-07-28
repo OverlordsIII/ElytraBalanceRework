@@ -9,7 +9,7 @@ import me.shedaniel.cloth.clothconfig.shadowed.blue.endless.jankson.Comment;
 public class ElytraBalanceReworkConfig implements ConfigData {
 
 	@Comment("Determines the amount of elytra damage that can be repaired by a phantom membrane. Vanilla default is 200.")
-	public int phantomMembraneRepair = 400;
+	public double phantomMembraneRepair = 400;
 
 	@Comment("Changes the spawn rate of elytras in end-cities")
 	public boolean rebalanceElytraSpawns = true;
@@ -24,13 +24,13 @@ public class ElytraBalanceReworkConfig implements ConfigData {
 	public double partiallyDamagedElytraSpawnPercentage = 15;
 
 	@Comment("Amount of damage rockets do to elytras on immediate use. Vanilla default is 0")
-	public int initialRocketUseDamage = 10;
+	public double initialRocketUseDamage = 10;
 
 	@Comment("Elytra Durability. Vanilla default is 432")
-	public int elytraDurability = 800;
+	public double elytraDurability = 800;
 
 	@Comment("Percentage of damage that is absorbed by elytra when flying")
-	public float elytraDamagePercentageAbsorbed = 10;
+	public double elytraDamageAbsorbedPercentage = 10;
 
 	@Comment("Stops elytra taking durability damage when flying")
 	public boolean stopElytraFlyDamage = true;

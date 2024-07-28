@@ -1,5 +1,6 @@
 package io.github.overlordsiii;
 
+import io.github.overlordsiii.command.ElytraBalanceCommand;
 import io.github.overlordsiii.config.ElytraBalanceReworkConfig;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.ConfigManager;
@@ -14,6 +15,7 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 
 public class ElytraBalanceRework implements ModInitializer {
 
@@ -35,6 +37,8 @@ public class ElytraBalanceRework implements ModInitializer {
 	 */
 	@Override
 	public void onInitialize() {
-
+		CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> {
+			ElytraBalanceCommand.register(dispatcher);
+		});
 	}
 }

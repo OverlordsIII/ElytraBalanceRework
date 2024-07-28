@@ -23,6 +23,6 @@ public class ItemsMixin {
 	)
 	private static int replaceElytraMaxDamage(int maxDamage)
 	{
-		return ElytraBalanceRework.CONFIG.elytraDurability;
+		return (int) ElytraBalanceRework.CONFIG.elytraDurability;
 	}
 }
