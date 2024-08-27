@@ -23,8 +23,6 @@ public abstract class LivingEntityMixin extends Entity {
 
 	@Shadow public abstract Iterable<ItemStack> getArmorItems();
 
-	@Shadow public abstract EquipmentSlot getPreferredEquipmentSlot(ItemStack stack);
-
 	public LivingEntityMixin(EntityType<?> type, World world) {
 		super(type, world);
 	}
@@ -40,12 +38,12 @@ public abstract class LivingEntityMixin extends Entity {
 					float tenPercent = (float) (((ElytraBalanceRework.CONFIG.elytraDamageAbsorbedPercentage) / 100) * amount);
 					itemStackDamage = Math.max(1, Math.round(tenPercent));
 				}
-				itemStack.damage(itemStackDamage, ((LivingEntity) (Object) this), this.getPreferredEquipmentSlot(itemStack));
+				itemStack.damage(itemStackDamage, ((LivingEntity) (Object) this), living -> living.sendEquipmentBreakStatus(EquipmentSlot.CHEST));
 			}
 		}
 	}
 
-	@ModifyArg(method = "tickFallFlying", at = @At(value = "INVOKE", target = "Lnet/minecraft/item/ItemStack;damage(ILnet/minecraft/entity/LivingEntity;Lnet/minecraft/entity/EquipmentSlot;)V"), index = 0)
+	@ModifyArg(method = "tickFallFlying", at = @At(value = "INVOKE", target = "Lnet/minecraft/item/ItemStack;damage(ILnet/minecraft/entity/LivingEntity;Ljava/util/function/Consumer;)V"), index = 0)
 	public int modifyElytraDamage(int amount) {
 		if (ElytraBalanceRework.CONFIG.stopElytraFlyDamage) {
 			return 0;

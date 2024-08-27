@@ -7,6 +7,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.FireworkRocketItem;
 import net.minecraft.item.ItemStack;
@@ -27,7 +28,7 @@ public class FireworkRocketItemMixin {
 		}
 		user.getArmorItems().forEach(itemStack -> {
 			if (itemStack.getItem().equals(Items.ELYTRA)) {
-				itemStack.damage((int) ElytraBalanceRework.CONFIG.initialRocketUseDamage, user, user.getPreferredEquipmentSlot(itemStack));
+				itemStack.damage((int) ElytraBalanceRework.CONFIG.initialRocketUseDamage, user, playerEntity -> playerEntity.sendEquipmentBreakStatus(EquipmentSlot.CHEST));
 			}
 		});
 	}

@@ -25,7 +25,6 @@ public class ElytraBalanceRework implements ModInitializer {
 
 	public static final ConfigManager<ElytraBalanceReworkConfig> CONFIG_MANAGER;
 
-	public static final RegistryKey<LootTable> EXTRA_END_CITY_LOOT_REGISTRY = RegistryKey.of(RegistryKeys.LOOT_TABLE, Identifier.of("elytra_balance_rework", "chests/extra_end_city_loot"));
 
 	static {
 		CONFIG_MANAGER = (ConfigManager<ElytraBalanceReworkConfig>) AutoConfig.register(ElytraBalanceReworkConfig.class, JanksonConfigSerializer::new);

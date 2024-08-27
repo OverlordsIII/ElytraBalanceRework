@@ -8,7 +8,6 @@
     "EndCityGeneratorMixin",
     "FireworkRocketItemMixin",
     "ItemsMixin",
-    "EnchantmentsMixin",
     "LivingEntityMixin"
   ],
   "client": [],

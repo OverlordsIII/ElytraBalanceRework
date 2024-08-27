@@ -12,8 +12,10 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.FacingBlock;
-import net.minecraft.inventory.LootableInventory;
+import net.minecraft.block.entity.LootableContainerBlockEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.loot.LootTable;
+import net.minecraft.loot.LootTables;
 import net.minecraft.structure.EndCityGenerator;
 import net.minecraft.structure.SimpleStructurePiece;
 import net.minecraft.structure.StructurePieceType;
@@ -51,7 +53,8 @@ public abstract class EndCityGeneratorMixin extends SimpleStructurePiece {
 
 			world.setBlockState(pos.down(), Blocks.SHULKER_BOX.getDefaultState().with(FacingBlock.FACING, this.placementData.getRotation().rotate(Direction.SOUTH)), Block.NOTIFY_ALL);
 
-			LootableInventory.setLootTable(world, random, pos.down(), ElytraBalanceRework.EXTRA_END_CITY_LOOT_REGISTRY);
+			Identifier lootID = Identifier.of("elytra_balance_rework", "chests/extra_end_city_loot");
+			LootableContainerBlockEntity.setLootTable(world, random, pos.down(), lootID);
 		}
 
 		if (state == ElytraGenerationState.NO_ELYTRA) {
