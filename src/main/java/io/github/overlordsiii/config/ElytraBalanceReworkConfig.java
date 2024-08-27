@@ -8,8 +8,8 @@ import me.shedaniel.cloth.clothconfig.shadowed.blue.endless.jankson.Comment;
 @Config.Gui.Background("minecraft:textures/block/purpur_pillar.png")
 public class ElytraBalanceReworkConfig implements ConfigData {
 
-	@Comment("Determines the amount of elytra damage that can be repaired by a phantom membrane. Vanilla default is 200.")
-	public double phantomMembraneRepair = 400;
+	@Comment("Determines the percent of elytra damage that can be repaired by a phantom membrane. Will be a random amount up to the desired percent")
+	public double phantomMembraneRepair = 25;
 
 	@Comment("Changes the spawn rate of elytras in end-cities")
 	public boolean rebalanceElytraSpawns = true;
